@@ -5,6 +5,12 @@ import third1 from '../images/third-content 1.jpg'
 import hall from '../images/hall.jpg';
 import bedroom from '../images/bedroom.jpg';
 import kitchen from '../images/kitchen.jpg';
+import first from '../images/first-photo.jpg';
+import second from '../images/second-photo.jpg';
+import third2 from '../images/third-photo.jpg';
+import fourth from '../images/fourth-photo.jpg';
+import fifth from '../images/fifth-photo.jpg';
+import sixth from '../images/sixth-photo.jpg';
 import "../styles/home.css"
 function Home(){
     return (
@@ -108,6 +114,52 @@ function Home(){
                     <div className="heading">
                         <p>CATEGORIES</p>
                     </div>
+                    <div className="sub-heading">
+                        <p>Check out latest updates</p>
+                    </div>
+                    <div className="total-image">
+                    <div>
+                        <img src={first}/>
+                        <p>LIVING</p>
+                    </div>
+                    <div>
+                        <p>PEACFUL</p>
+                        <img src={second}/>
+                        
+                    </div>
+                    <div>
+                        <img src={third2}/>
+                        <p>STUDY</p>
+                    </div>
+                    <div>
+                        <p>BEDROOM</p>
+                        <img src={fourth}/>
+                    </div>
+                    <div>
+                        <img src={fifth}/>
+                        <p>DINNING</p>
+                    </div>
+                    <div>
+                        <p>HALL</p>
+                        <img src={sixth}/>
+                    </div>
+                    </div>
+                    
+                </div>
+
+
+
+                <div className="fifth-content">
+                    <div className="content">
+                    <div className="small-content">
+                    <p>You dream It, we design It</p>
+                    </div>
+                    <div className="medium-content">
+                        <p>Contact us today to begin the
+                        journey toward you've always envisioned</p>
+                    </div>
+                    </div>
+                    
                     
                 </div>
 
