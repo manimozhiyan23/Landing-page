@@ -2,6 +2,9 @@ import logo from '../images/logo.jpg';
 import home from '../images/CREATIVE HOME INTERIOR.png';
 import third from '../images/third content.jpg'; 
 import third1 from '../images/third-content 1.jpg'
+import hall from '../images/hall.jpg';
+import bedroom from '../images/bedroom.jpg';
+import kitchen from '../images/kitchen.jpg';
 import "../styles/home.css"
 function Home(){
     return (
@@ -105,6 +108,7 @@ function Home(){
                     <div className="heading">
                         <p>CATEGORIES</p>
                     </div>
+                    
                 </div>
 
 
