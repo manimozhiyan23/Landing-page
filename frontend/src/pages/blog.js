@@ -1,5 +1,11 @@
 import "../styles/blog.css"
 import Blog_first from "../images/home page 1.webp";
+import Blog1 from "../images/blog-image1.jpg";
+import Blog2 from "../images/blog-image 2.jpg";
+import Blog3 from "../images/blog-image 3.jpg";
+import Blog4 from "../images/blog-image 4.jpg";
+import Blog5 from "../images/blog-image 5.jpg";
+import Blog6 from "../images/blog-image 6.jpg";
 import { Link } from 'react-router-dom';
 import logo from '../images/logo.jpg';
 function Blog(){
@@ -45,6 +51,39 @@ function Blog(){
                 </div>
                 <div className="article">
                     <p>CHECK OUR RECENT ARTICLE</p>
+                </div>
+                <div className="third-blog-image">
+                    <div className="first-three">
+                    <div className="month">
+                        <img  src={Blog1}/>
+                        <p>MARCH 20th</p>
+                    </div>
+                    <div className="month">
+                        <img  src={Blog2}/>
+                        <p>APRIL 12th</p>
+                    </div>
+                    <div className="month">
+                        <img  src={Blog3}/>
+                        <p>APRIL 30th</p>
+                    </div>
+                    </div>
+
+                    <div className="first-three">
+                    <div className="month">
+                        <img  src={Blog4}/>
+                        <p>MAY 10th</p>
+                    </div>
+                    <div className="month">
+                        <img  src={Blog5}/>
+                        <p>JUNE 20th</p>
+                    </div>
+                    <div className="month">
+                        <img  src={Blog6}/>
+                        <p>JUNE 30th</p>
+                    </div>
+                    </div>
+                   
+                   
                 </div>
             </div>
 

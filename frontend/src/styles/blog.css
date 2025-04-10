@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
 .blog-image img{
     width: 100%;
@@ -13,6 +15,10 @@
 }
 .first-name{
     font-family: "Special Gothic Expanded One", sans-serif;
+}
+.second-name{
+    font-size: larger;
+    font-weight: 800;
 }
 .both-name{
     position:absolute;
@@ -32,4 +38,64 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: "Noto Serif", serif;
+    font-size: x-large;
+    color:#006A71;
+    padding-top: 20px;
+}
+.article{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    font-family: "Playwrite US Modern", cursive;
+    color: #493D9E;
+}
+.first-three div{
+    width: 30%;
+    object-fit: cover;
+}
+.first-three img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.second-three div{
+    width: 30%;
+    object-fit: cover;
+}
+.second-three img{
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+   
+}
+
+.first-three{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding-bottom: 40px;
+    
+}
+
+.first-three p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    text-align: center;
+    position: absolute;
+    top: 90%;
+    background-color: #9ACBD0;
+    width: 100px;
+    border-radius: 10px;
+}
+.month{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
