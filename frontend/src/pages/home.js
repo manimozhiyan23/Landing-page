@@ -12,6 +12,7 @@ import fourth from '../images/fourth-photo.jpg';
 import fifth from '../images/fifth-photo.jpg';
 import sixth from '../images/sixth-photo.jpg';
 import "../styles/home.css"
+import { Link } from 'react-router-dom';
 function Home(){
     return (
         <>
@@ -21,8 +22,8 @@ function Home(){
                 <img className="logo" src={logo} alt="Logo" />
                 </div>
                 <div className='nav-names'>
-                <p>Home</p>
-                <p>Blog</p>
+                <Link to={"/"}>Home</Link>
+                <Link to={"/blog"}>Blog</Link>
                 <p>product</p>
                 <p>my cart</p>
                 <p>contact us</p>
@@ -162,6 +163,12 @@ function Home(){
                     
                     
                 </div>
+
+                <footer>
+                        <div className="footer">
+                            <p>&#169; 2025 mani. All rights reserved.</p>
+                        </div>
+                </footer>
 
 
 
