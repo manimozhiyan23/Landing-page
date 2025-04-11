@@ -24,7 +24,7 @@ function Home(){
                 <div className='nav-names'>
                 <Link to={"/"}>Home</Link>
                 <Link to={"/blog"}>Blog</Link>
-                <p>product</p>
+                <Link to={"/product"}>Product</Link>
                 <p>my cart</p>
                 <p>contact us</p>
                 </div>

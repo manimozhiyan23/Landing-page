@@ -1,5 +1,5 @@
 import "../styles/blog.css"
-import Blog_first from "../images/home page 1.webp";
+import Blog_first from "../images/blog first.jpg";
 import Blog1 from "../images/blog-image1.jpg";
 import Blog2 from "../images/blog-image 2.jpg";
 import Blog3 from "../images/blog-image 3.jpg";
@@ -20,7 +20,7 @@ function Blog(){
                 <div className='nav-names'>
                 <Link to={"/"}>Home</Link>
                 <Link to={"/blog"}>Blog</Link>
-                <p>product</p>
+                <Link to={"/product"}>Product</Link>
                 <p>my cart</p>
                 <p>contact us</p>
                 </div>
@@ -86,6 +86,47 @@ function Blog(){
                    
                 </div>
             </div>
+
+
+            <div className="fourth">
+                <div className="text">
+                <div className="question1 question">
+                    <p>Where does it come from?</p>
+                </div>
+                <div className="answer1 answer">
+                    <p>Lorem ipsum dolor sit amet, consectetur 
+                        adipiscing elit, sed do eiusmod tempor 
+                        incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitatio
+                         ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                         <br/>Sed ut perspiciatis unde omnis iste natus error sit
+                          voluptatem accusantium doloremque laudantium, totam rem
+                          aperiam, eaque ipsa quae ab illo inventore veritatis et 
+                          quasi architecto beatae vitae dicta sunt explicabo. Nemo 
+                          enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+                         </p>
+                </div>
+                <div className="question2 question">
+                    <p>What are my payment options?</p>
+                </div>
+                <div className="answer2 answer">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                         eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                         Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                         laboris nisi ut aliquip ex ea commodo consequat.
+                         <br/>Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
+                         accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+                         ab illo inventore veritatis et quasi architecto beatae vitae dicta 
+                         sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur
+                          aut odit aut fugit.</p>
+                </div>
+                </div>
+              
+            </div>
+
+            <footer className="last">
+                <p>© 2025 mani. All rights reserved.</p>
+            </footer>
 
 
             
