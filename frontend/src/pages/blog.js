@@ -1,5 +1,5 @@
 import "../styles/blog.css"
-import Blog_first from "../images/blog first.jpg";
+import Blog_first from "../images/blog-first-image.jpg";
 import Blog1 from "../images/blog-image1.jpg";
 import Blog2 from "../images/blog-image 2.jpg";
 import Blog3 from "../images/blog-image 3.jpg";
@@ -33,7 +33,7 @@ function Blog(){
             
             <div className="second">
             <div className='blog-image'>
-                <img src={Blog_first} alt=''/>
+                <img src={Blog_first}/>
                 <div className="both-name">
             <div className="first-name">
                 <p>Explore The Features</p>
