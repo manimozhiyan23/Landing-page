@@ -24,11 +24,14 @@
     border-radius: 20px;
     
 }
-.product-first-four,p{
+.product-first-four{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: row;
+}
+.product-first-four p{
+    text-align: center;
 }
 .product-second-four{
     display: flex;
@@ -36,11 +39,17 @@
     justify-content: space-evenly;
     flex-direction: row;
 }
+.product-second-four p{
+    text-align: center;
+}
 .product-third-four{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: row;
+}
+.product-third-four p{
+    text-align: center;
 }
 .product-first-four img:hover{
     box-shadow: 0 10px 24px #BBD8A3;
