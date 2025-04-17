@@ -52,16 +52,20 @@
 .contact-box{
     border: 1px solid black;
     width: 50%;
-    height: 50vh;
+    height: 65vh;
     margin-left: 20px;
    margin-top: 20px;
+   border-radius: 20px;
+   background-color: #123458;
 }
 .get-in-touch{
+    font-family: "Playfair Display", serif;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: larger;
     font-weight: bold;
+    color: aliceblue;
     
 }
 .contact-name-email{
@@ -98,14 +102,41 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: yellow;
     width: 100%;
     height: 15vh;
     gap: 20px;
     margin-bottom: 20px;
+
 }
 .massage textarea{
-    width: 40%;
-    height:40px;
-    border-radius: 20px;
+    width: 100%;     
+  height: 150px;    
+  resize: vertical; 
+  padding: 10px;   
+  font-size: 16px; 
+  border-radius: 10px;
 }
+.contact-submit {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+  
+.contact-submit button {
+    width: 90%; 
+    padding: 15px;
+    background-color: #A0C878;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.contact-submit button:hover {
+    background-color: #DDEB9D; 
+}
+
+  

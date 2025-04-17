@@ -58,10 +58,15 @@ function Contact(){
                 <input placeholder='subject'></input>
                 </div>
                 <div className='message'>
-                    <textarea placeholder='message'></textarea>
+                    <textarea placeholder='message' style={{ width: '90%', height: '100px', padding: '10px', fontSize: '16px', borderRadius:"20px", }}></textarea>
+                </div>
+                <div className='contact-submit'>
+                    <button type='submit'>submit</button>
                 </div>
             </div>
             
+
+           
 
 
 
