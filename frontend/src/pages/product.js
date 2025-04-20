@@ -27,7 +27,7 @@ function Product(){
                 <Link to={"/"}>Home</Link>
                 <Link to={"/blog"}>Blog</Link>
                 <Link to={"/product"}>Product</Link>
-                <p>my cart</p>
+                <Link to={"/cart"}>cart</Link>
                 <Link to={"/contact"}>contact</Link>
                 </div>
                 <div className="login">

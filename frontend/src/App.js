@@ -5,6 +5,7 @@ import './App.css';
 import Blog from "./pages/blog";
 import Product from "./pages/product";
 import Contact from "./pages/contact"
+import Cart from "./pages/cart";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/blog" element={<Blog/>}/>
         <Route path="/product" element={<Product/>}/>
         <Route path="/contact" element={<Contact/>}/>
+        <Route path="/cart" element={<Cart/>}/>
       </Routes>
     </Router>
   );
