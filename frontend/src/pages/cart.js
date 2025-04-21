@@ -30,7 +30,7 @@ function Cart(){
 
             <div>
                 <div>
-                    
+                    <p>home/shop</p>
                 </div>
             </div>
 
