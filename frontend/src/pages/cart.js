@@ -28,11 +28,14 @@ function Cart(){
                 <p>Shoping Cart</p>
             </div>
 
-            <div>
-                <div>
-                    <p>home/shop</p>
-                </div>
-            </div>
+
+            
+
+            <footer>
+                    <div className="footer">
+                        <p>&#169; 2025 mani. All rights reserved.</p>
+                    </div>
+            </footer>
 
 
 
