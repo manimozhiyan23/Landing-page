@@ -1,3 +1,8 @@
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+
+
+
 import { Link } from 'react-router-dom';
 import logo from '../images/logo.jpg';
 import product1 from "../images/product-1.jpg";
@@ -16,6 +21,23 @@ import feature from "../images/feature.jpg";
 
 import "../styles/product.css"
 function Product(){
+    const navigate = useNavigate();
+
+    const handleAddToCart = async (product) => {
+        await axios.post('http://localhost:8080/api/cart/add', {
+          productName: product.name,
+          price: product.price,
+          imageUrl: product.imageUrl,
+          quantity: 1, // You can increment this if needed
+        });
+        alert("Added to cart!");
+      };
+      
+      
+
+
+
+
     return(
         <>
         <div>
@@ -51,27 +73,27 @@ function Product(){
                     <img src={product1}/>
                     <p>Abstract Table</p>
                     <p>$40.00</p>
-                    <button>ADD TO CART</button>
-                </div>
+                    <button onClick={() => handleAddToCart("Abstract Table", 40.00, product1)}>ADD TO CART</button>
+                    </div>
                 <div>
                     <img src={product2}/>
                     <p>Coffee Table</p>
                     <p>$60.00</p>
-                    <button>ADD TO CART</button>
+                    <button onClick={() => handleAddToCart("Abstract Table", 40.00, product1)}>ADD TO CART</button>
 
                 </div>
                 <div>
                     <img src={product3}/>
                     <p>Modern Sofa</p>
                     <p>$80.00</p>
-                    <button>ADD TO CART</button>
+                    <button onClick={() => handleAddToCart("Abstract Table", 40.00, product1)}>ADD TO CART</button>
 
                 </div>
                 <div>
                     <img src={product4}/>
                     <p>Modren Chair</p>
                     <p>$40.00</p>
-                    <button>ADD TO CART</button>
+                    <button onClick={() => handleAddToCart("Abstract Table", 40.00, product1)}>ADD TO CART</button>
 
                 </div>
                 </div>
@@ -81,28 +103,28 @@ function Product(){
                     <img src={product5}/>
                     <p>Elegant Chair</p>
                     <p>$70.00</p>
-                    <button>ADD TO CART</button>
+                    <button onClick={() => handleAddToCart("Abstract Table", 40.00, product1)}>ADD TO CART</button>
 
                 </div>
                 <div>
                     <img src={product6}/>
                     <p>Daily Chair</p>
                     <p>$70.00</p>
-                    <button>ADD TO CART</button>
+                    <button onClick={() => handleAddToCart("Abstract Table", 40.00, product1)}>ADD TO CART</button>
 
                 </div>
                 <div>
                     <img src={product7}/>
                     <p>Modren Chair</p>
                     <p>140.00</p>
-                    <button>ADD TO CART</button>
+                    <button onClick={() => handleAddToCart("Abstract Table", 40.00, product1)}>ADD TO CART</button>
 
                 </div>
                 <div>
                     <img src={product8}/>
                     <p>Elegant Chair</p>
                     <p>$80.00</p>
-                    <button>ADD TO CART</button>
+                    <button onClick={() => handleAddToCart("Abstract Table", 40.00, product1)}>ADD TO CART</button>
 
                 </div>
                 </div>
@@ -112,28 +134,28 @@ function Product(){
                     <img src={product9}/>
                     <p>Single Sofa</p>
                     <p>$60.00</p>
-                    <button>ADD TO CART</button>
+                    <button onClick={() => handleAddToCart("Abstract Table", 40.00, product1)}>ADD TO CART</button>
 
                 </div>
                 <div>
                     <img src={product10}/>
                     <p>Modren Sofa</p>
                     <p>$60.00</p>
-                    <button>ADD TO CART</button>
+                    <button onClick={() => handleAddToCart("Abstract Table", 40.00, product1)}>ADD TO CART</button>
 
                 </div>
                 <div>
                     <img src={product11}/>
                     <p>Confort Chair</p>
                     <p>$40.00</p>
-                    <button>ADD TO CART</button>
+                    <button onClick={() => handleAddToCart("Abstract Table", 40.00, product1)}>ADD TO CART</button>
 
                 </div>
                 <div>
                     <img src={product12}/>
                     <p>Daily Sofa</p>
                     <p>$70.00</p>
-                    <button>ADD TO CART</button>
+                    <button onClick={() => handleAddToCart("Abstract Table", 40.00, product1)}>ADD TO CART</button>
 
                 </div>
                 </div>
