@@ -38,8 +38,15 @@ function Cart() {
         </div>
       </div>
 
+
+      <div>
+
+      </div>
+
       <div className="cart-content">
+        <div className="cart-title">
         <h2>Your Cart</h2>
+        </div>
 
         {loading ? (
           <p>Loading cart items...</p>
