@@ -8,6 +8,7 @@ function Cart() {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  // Fetch cart items
   useEffect(() => {
     axios.get("http://localhost:8080/api/cart")
       .then(res => {
@@ -20,8 +21,30 @@ function Cart() {
       });
   }, []);
 
+  // Remove item from cart
+ const handleDelete = async (id) => {
+  try {
+    await axios.delete(`http://localhost:8080/api/cart/delete/${id}`);
+    alert("Item removed!");
+
+    // 🟢 Refresh cart after delete:
+    const res = await axios.get("http://localhost:8080/api/cart");
+    setItems(res.data);
+  } catch (error) {
+    console.error("Failed to remove item:", error);
+  }
+};
+
+
+  // Calculate total price
+  const totalPrice = items.reduce(
+    (total, item) => total + item.price * (item.quantity || 1),
+    0
+  );
+
   return (
     <>
+      {/* Navigation Bar */}
       <div className="nav">
         <div>
           <img className="logo" src={logo} alt="Logo" />
@@ -38,14 +61,10 @@ function Cart() {
         </div>
       </div>
 
-
-      <div>
-
-      </div>
-
+      {/* Cart Section */}
       <div className="cart-content">
         <div className="cart-title">
-        <h2>Your Cart</h2>
+          <h2>Your Cart</h2>
         </div>
 
         {loading ? (
@@ -53,20 +72,27 @@ function Cart() {
         ) : items.length === 0 ? (
           <p>Your cart is empty.</p>
         ) : (
-          <div className="cart-items">
-            {items.map((item) => (
-              <div key={item.id || item._id} className="cart-item">
-                {item.imageUrl && (
-                  <img src={item.imageUrl} alt={item.productName} width="100" />
-                )}
-                <div>
-                  <p><strong>{item.productName}</strong></p>
-                  <p>Price: ${item.price}</p>
-                  <p>Quantity: {item.quantity || 1}</p>
+          <>
+            <div className="cart-items">
+              {items.map((item) => (
+                <div key={item.id || item._id} className="cart-item">
+                  {item.imageUrl && (
+                    <img src={item.imageUrl} alt={item.productName} width="100" />
+                  )}
+                  <div>
+                    <p><strong>{item.productName}</strong></p>
+                    <p>Price: ${item.price}</p>
+                    <p>Quantity: {item.quantity || 1}</p>
+<button onClick={() => handleDelete(item.id)}>Remove</button>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+
+            <div className="cart-total">
+              <h3>Total: ${totalPrice.toFixed(2)}</h3>
+            </div>
+          </>
         )}
       </div>
     </>
