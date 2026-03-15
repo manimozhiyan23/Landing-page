@@ -29,7 +29,14 @@ function Home(){
                 <Link to={"/contact"}>contact</Link>
                 </div>
                 <div className="login">
-                    <button>LOGIN</button>
+                    {localStorage.getItem('username') ? (
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                            <span style={{ fontWeight: 'bold' }}>{localStorage.getItem('username')}</span>
+                            <button onClick={() => { localStorage.removeItem('username'); window.location.reload(); }}>LOGOUT</button>
+                        </div>
+                    ) : (
+                        <button><Link to="/login" style={{ textDecoration: 'none', color: 'inherit' }}>LOGIN</Link></button>
+                    )}
                 </div>
             </div>
             <div className='home-image'>
