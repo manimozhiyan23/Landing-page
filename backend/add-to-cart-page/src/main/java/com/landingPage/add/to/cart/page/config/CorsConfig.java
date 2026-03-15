@@ -1,4 +1,4 @@
-package com.landingPage.add.to.cart.page.Config;
+package com.landingPage.add.to.cart.page.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
