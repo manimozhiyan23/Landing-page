@@ -1,27 +1,18 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLocationDot, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import {
-    faInstagram,
-    faTwitter,
-    faFacebook,
-    faWhatsapp,
-    faPinterest,
-    faYoutube,
-} from '@fortawesome/free-brands-svg-icons';
-import abovefooter from "../images/above-footer.jpg";
-import "../styles/contact.css"
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import abovefooter from "../images/above-footer.jpg";
+import "../styles/contact.css";
 import logo from '../images/logo.jpg';
-import React from 'react';   //this is for set the google map
+
 function Contact() {
-    const [formData, setFormData] = React.useState({
+    const [formData, setFormData] = useState({
         name: '',
         email: '',
         phone: '',
         subject: '',
         message: ''
     });
-    const [statusMatch, setStatusMatch] = React.useState('');
+    const [statusMatch, setStatusMatch] = useState('');
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -60,8 +51,8 @@ function Contact() {
                         <Link to={"/"}>Home</Link>
                         <Link to={"/blog"}>Blog</Link>
                         <Link to={"/product"}>Product</Link>
-                        <Link to={"/cart"}>cart</Link>
-                        <Link to={"/contact"}>contact</Link>
+                        <Link to={"/cart"}>Cart</Link>
+                        <Link to={"/contact"}>Contact</Link>
                     </div>
                     <div className="login">
                         {localStorage.getItem('username') ? (
@@ -77,24 +68,19 @@ function Contact() {
 
                 <div className='icons'>
                     <div className='location-icon'>
-                        <FontAwesomeIcon icon={faLocationDot} />
-                        <p>13th Street. 47 W 13th St, DELHI, 10011, INDIA</p>
+                        <p>📍 13th Street. 47 W 13th St, DELHI, 10011, INDIA</p>
                     </div>
                     <div className='phone-icon'>
-                        <FontAwesomeIcon icon={faPhone} />
-                        <p>(+91) 84283 99789
-                            Mon-Sat 9:00am-5:00pm</p>
+                        <p>📞 (+91) 84283 99789 Mon-Sat 9:00am-5:00pm</p>
                     </div>
                     <div className='email-icon'>
-                        <FontAwesomeIcon icon={faEnvelope} />
-                        <p>mani@gamil.com
-                            24 X 7 online support</p>
+                        <p>✉️ mani@gamil.com 24 X 7 online support</p>
                     </div>
 
                 </div>
 
                 <div className='above-footer-image'>
-                    <img src={abovefooter} />
+                    <img src={abovefooter} alt="Above Footer" />
                 </div>
 
 
@@ -120,7 +106,7 @@ function Contact() {
                         </div>
                     </form>
                     <div className='map'>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.7210216351154!2d77.25186707553948!3d28.548103975711015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce303269b736f%3A0x6a1dc1cf73e5568e!2sJasish!5e0!3m2!1sen!2sin!4v1744953630246!5m2!1sen!2sin"></iframe>
+                        <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.7210216351154!2d77.25186707553948!3d28.548103975711015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce303269b736f%3A0x6a1dc1cf73e5568e!2sJasish!5e0!3m2!1sen!2sin!4v1744953630246!5m2!1sen!2sin" width="100%" height="450" style={{ border: 0 }} allowFullScreen="" loading="lazy"></iframe>
                     </div>
 
                 </div>
@@ -133,24 +119,7 @@ function Contact() {
                     </div>
 
                     <div className='all-in-one-icons'>
-                        <div className="contact-footer-icon">
-                            <FontAwesomeIcon icon={faInstagram} />
-                        </div>
-                        <div className="contact-footer-icon">
-                            <FontAwesomeIcon icon={faTwitter} />
-                        </div>
-                        <div className="contact-footer-icon">
-                            <FontAwesomeIcon icon={faFacebook} />
-                        </div>
-                        <div className="contact-footer-icon">
-                            <FontAwesomeIcon icon={faWhatsapp} />
-                        </div>
-                        <div className="contact-footer-icon">
-                            <FontAwesomeIcon icon={faPinterest} />
-                        </div>
-                        <div className="contact-footer-icon">
-                            <FontAwesomeIcon icon={faYoutube} />
-                        </div>
+                        {/* Icons temporarily removed to fix React error */}
                     </div>
 
                 </footer>
