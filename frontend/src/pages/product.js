@@ -24,7 +24,7 @@ function Product() {
 
   const handleAddToCart = async (name, price, imageUrl) => {
     try {
-      await axios.post('http://localhost:8080/api/cart/add', {
+      await axios.post('https://landing-page-production-4704.up.railway.app/api/cart/add', {
         productName: name,
         price: price,
         imageUrl: imageUrl,

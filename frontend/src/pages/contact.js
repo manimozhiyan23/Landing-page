@@ -30,7 +30,7 @@ function Contact() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:8080/api/contact/submit', {
+            const response = await fetch('https://landing-page-production-4704.up.railway.app/api/contact/submit', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

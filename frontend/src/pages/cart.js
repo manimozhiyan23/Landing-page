@@ -10,7 +10,7 @@ function Cart() {
 
   // Fetch cart items
   useEffect(() => {
-    axios.get("http://localhost:8080/api/cart")
+    axios.get("https://landing-page-production-4704.up.railway.app/api/cart")
       .then(res => {
         setItems(res.data);
         setLoading(false);
@@ -24,11 +24,11 @@ function Cart() {
   // Remove item from cart
  const handleDelete = async (id) => {
   try {
-    await axios.delete(`http://localhost:8080/api/cart/delete/${id}`);
+    await axios.delete(`https://landing-page-production-4704.up.railway.app/api/cart/delete/${id}`);
     alert("Item removed!");
 
     // 🟢 Refresh cart after delete:
-    const res = await axios.get("http://localhost:8080/api/cart");
+    const res = await axios.get("https://landing-page-production-4704.up.railway.app/api/cart");
     setItems(res.data);
   } catch (error) {
     console.error("Failed to remove item:", error);
